@@ -1,8 +1,12 @@
-![banner](https://user-images.githubusercontent.com/84241003/178442683-678ce366-98d5-40d7-8f16-91e6e207b275.png)
-
-![banner3](https://user-images.githubusercontent.com/84241003/178454228-5daedf69-914b-4688-b798-b124aa015361.gif)
-![gifbanner4](https://user-images.githubusercontent.com/84241003/178455750-88e6a08d-2e9a-4a5c-aaa4-ca182ae4185d.gif)
 ![updated](https://user-images.githubusercontent.com/84241003/178457017-7126a06b-e0c1-484e-b0a8-c94b7f98ab2b.gif)
+
+https://img.shields.io/github/repo-size/Preffet/C-Reliable-UDP-File-Transfer-Protocol?color=%23018744
+
+https://img.shields.io/github/languages/code-size/Preffet/C-Reliable-UDP-File-Transfer-Protocol?color=%2301877a
+
+https://img.shields.io/github/directory-file-count/Preffet/C-Reliable-UDP-File-Transfer-Protocol?color=%23016a87
+
+https://img.shields.io/github/last-commit/Preffet/C-Reliable-UDP-File-Transfer-Protocol?color=%23013987
 
 
 ## C Reliable File Transfer protocol that works on top of UDP 
