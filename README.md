@@ -1,8 +1,9 @@
-![updated](https://user-images.githubusercontent.com/84241003/178457017-7126a06b-e0c1-484e-b0a8-c94b7f98ab2b.gif)
-![Badge tracking repo size](https://img.shields.io/github/repo-size/Preffet/C-Reliable-UDP-File-Transfer-Protocol?color=%23018744)
-![Badge tracking code size](https://img.shields.io/github/languages/code-size/Preffet/C-Reliable-UDP-File-Transfer-Protocol?color=%2301877a)
-![Badge tracking number of files](https://img.shields.io/github/directory-file-count/Preffet/C-Reliable-UDP-File-Transfer-Protocol?color=%23016a87)
 ![Badge tracking last commit](https://img.shields.io/github/last-commit/Preffet/C-Reliable-UDP-File-Transfer-Protocol?color=%23013987)
+![Badge tracking number of files](https://img.shields.io/github/directory-file-count/Preffet/C-Reliable-UDP-File-Transfer-Protocol?color=%23016a87)
+![Badge tracking code size](https://img.shields.io/github/languages/code-size/Preffet/C-Reliable-UDP-File-Transfer-Protocol?color=%2301877a)
+![Badge tracking repo size](https://img.shields.io/github/repo-size/Preffet/C-Reliable-UDP-File-Transfer-Protocol?color=%23018744)
+![updated](https://user-images.githubusercontent.com/84241003/178457017-7126a06b-e0c1-484e-b0a8-c94b7f98ab2b.gif)
+
 
 
 ## C Reliable File Transfer protocol that works on top of UDP 
