@@ -6,35 +6,34 @@
 
 
 ---------------------------------------------------------------------------
+  
+  
 
-#### **The purpose of this project is to demonstrate two file transfer protocols:**
+## The purpose of this project  
+This project demonstrates two file transfer protocols:
 - Reliable file transfer (RFT) with positive acknowledgement in the absence of errors 
 - Reliable file transfer (RFT) with positive acknowledgement and retransmission  – an example 
 of a PAR protocol
 
 
-#### **The RFT application comprises client and server applications:**
-- rft_client
-- rft_server
-
-The server has to be ran in one terminal window and the client in another 
+The RFT application comprises client and server applications. The server (rft_server)
+ has to be ran in one terminal window and the client (rft_client) in another 
 terminal window either on the same host (in which case the server address
 will be 127.0.0.1) or a different host (in which case the server address
 will be for an external IP interface).
 
-
 ---------------------------------------------------------------------------
 
-## Ways to run the project
+## Ways to run the project  
 
 #### **Using the provided shell scripts**  
-The following two shell scripts are provided as convenient ways to the
+The following two shell scripts are provided as convenient ways to 
 run the applications:
 
-    - run-server.sh to compile and run the rft_server
-        (which also compiles the rft_client)
+- run-server.sh to compile and run the rft_server 
+(which also compiles the rft_client)
     
-    - run-client.sh to compile and run the rft-client
+- run-client.sh to compile and run the rft-client
     
 By default, the run-server.sh script will compile the applications and
 start the server on port 20333, and the run-client.sh script will start
@@ -70,7 +69,8 @@ To see the client script help and usage message, enter the command:
 When a transfer is completed you can use the [diff](https://man7.org/linux/man-pages/man1/diff.1.html)
 command to check that the client-side input file is the same as the server-side output file.
 
-
+  
+    
 #### **Running the rft_client and rft_server applications directly**   
 
 You do not have to use the shell scripts. You can run the rft
@@ -93,6 +93,8 @@ And:
 to see the options for running the client application
 
 
+---------------------------------------------------------------------------
+
 ## Ways to test the project
 
 A test program is provided to test a subset of the rft_client_util
@@ -114,7 +116,7 @@ functions.
 
 ## An overview of input files
 
-The following input files are provided for you:
+The following are the provided input files:
 
 - in0.txt
 - in1.txt
@@ -159,9 +161,6 @@ output from the server for successful execution of a normal transfer
 
 - **README-client-timeout-tfr-err.txt**  
 output from the client when there is an error in a transfer with timeout
-
-The above files are intended to give an idea of the sort of output
-to expect during protocol execution.
 
 ---------------------------------------------------------------------------
 
