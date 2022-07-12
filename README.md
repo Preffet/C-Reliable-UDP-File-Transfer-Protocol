@@ -1,3 +1,6 @@
+![banner](https://user-images.githubusercontent.com/84241003/178442683-678ce366-98d5-40d7-8f16-91e6e207b275.png)
+
+
 ## C Reliable File Transfer protocol that works on top of UDP 
 
 The purpose of this project is to demonstrate two file transfer protocols: 
