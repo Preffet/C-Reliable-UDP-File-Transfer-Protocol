@@ -7,14 +7,13 @@
 
 ---------------------------------------------------------------------------
 
-**The purpose of this project is to demonstrate two file transfer protocols:**
+#### **The purpose of this project is to demonstrate two file transfer protocols:**
 - Reliable file transfer (RFT) with positive acknowledgement in the absence of errors 
 - Reliable file transfer (RFT) with positive acknowledgement and retransmission  – an example 
 of a PAR protocol
 
----------------------------------------------------------------------------
 
-The RFT application comprises client and server applications:
+#### **The RFT application comprises client and server applications:**
 - rft_client
 - rft_server
 
@@ -24,9 +23,11 @@ will be 127.0.0.1) or a different host (in which case the server address
 will be for an external IP interface).
 
 
-### Ways to run the project
+---------------------------------------------------------------------------
 
-**1) Using the provided shell scripts**
+## Ways to run the project
+
+#### **Using the provided shell scripts**  
 The following two shell scripts are provided as convenient ways to the
 run the applications:
 
@@ -69,24 +70,11 @@ To see the client script help and usage message, enter the command:
 When a transfer is completed you can use the [diff](https://man7.org/linux/man-pages/man1/diff.1.html)
 command to check that the client-side input file is the same as the server-side output file.
 
-TIP: if you want to test that you have correctly implemented reaching
-the limit of consecutive retries, just run the client with input file
-in660.txt with a loss probability of 0.5 or more without running the
-server. That is, enter the command:
 
-    ./run-client.sh 660 0.5
-    
-which should generate enough message loss to reach the limit of
-consecutive retries (provided there is no server running and therefore
-no ACKs at all).
-
-
-**2) Running the rft_client and rft_server applications directly**
+#### **Running the rft_client and rft_server applications directly**   
 
 You do not have to use the shell scripts. You can run the rft
-applications directly.
-
-To do this, enter the command:
+applications directly. To do this, enter the command:
 
     make 
     
@@ -105,84 +93,75 @@ And:
 to see the options for running the client application
 
 
-### Ways to test the project
+## Ways to test the project
 
-    A test program is provided to test a subset of the rft_client_util
-    library in isolation. The test program is test_rft_client_util. This
-    does not test communication between client and server. It just tests
-    some of the functions of the rft_client_util library.
+A test program is provided to test a subset of the rft_client_util
+library in isolation. The test program is test_rft_client_util. This
+does not test communication between client and server. It just tests
+some of the functions of the rft_client_util library.
 
-    The simplest way to build and run the test program is to enter the
-    following command:
+The simplest way to build and run the test program is to enter the
+following command:
 
         make test
 
-    this will compile the test program and run it. It uses the same test
-    framework as was used for assignment 1 and output is similar. Currently,
-    tests are provided for init_protocol, init_segment and set_udp_socket
-    functions.
+this will compile the test program and run it. It uses the same test
+framework as was used for assignment 1 and output is similar. Currently,
+tests are provided for init_protocol, init_segment and set_udp_socket
+functions.
 
 ---------------------------------------------------------------------------
-2. AN OVERVIEW OF INPUT FILES
+
+## An overview of input files
 
 The following input files are provided for you:
 
-    in0.txt
-    in1.txt
-    in17.txt
-    in34.txt
-    in35.txt
-    in36.txt
-    in350.txt
-    in660.txt
+- in0.txt
+- in1.txt
+- in17.txt
+- in34.txt
+- in35.txt
+- in36.txt
+- in350.txt
+- in660.txt
     
 The number that follows "in" in the filename is the size of the file in
-bytes.
-
-The sizes have been chosen deliberately to test the following file
+bytes. The sizes have been chosen deliberately to test the following file
 transfer conditions:
 
-    - zero sized file
-    - boundary condition file sizes, e.g. one more than zero and sizes  
-      one off the significant file data in a data segment payload
-    - multiples of significant file data size
-    - a larger file to test random data segment loss
-    
-When testing your solutions it is a good idea to try each of the input
-files to check that the solution works correctly for the different file
-sizes.
+- zero sized file
+- boundary condition file sizes, e.g. one more than zero and sizes one
+off the significant file data in a data segment payload
+- multiples of significant file data size
+- a larger file to test random data segment loss
 
 ---------------------------------------------------------------------------
-3. AN OVERVIEW OF EXAMPLE PROTOCOL LOG OUTPUT FILES
+
+## An overview of example log output files
 
 The following files provide examples of the log output from the
 rft_client and rft_server:
 
-    README-client-normal-tfr-out.txt:
-        output from the client for successful execution of a normal 
-        transfer
-    README-server-normal-tfr-out.txt:
-        output from the server for successful execution of a normal 
-        transfer
+- **README-client-normal-tfr-out.txt**  
+output from the client for successful execution of a normal transfer
+
+- **README-server-normal-tfr-out.txt**  
+output from the server for successful execution of a normal transfer
         
-    README-client-normal-tfr-err.txt:
-        output from the client when there is an error in a normal 
-        transfer
+- **README-client-normal-tfr-err.txt**  
+output from the client when there is an error in a normal transfer
 
-    README-client-timeout-tfr-out.txt
-        output from the client for successful execution of a transfer 
-        with timeout
-    README-server-timeout-tfr-out.txt:
-        output from the server for successful execution of a normal 
-        transfer
+- **README-client-timeout-tfr-out.txt**  
+output from the client for successful execution of a transfer  with timeout  
 
-    README-client-timeout-tfr-err.txt
-        output from the client when there is an error in a transfer 
-        with timeout
+- **README-server-timeout-tfr-out.txt**  
+output from the server for successful execution of a normal transfer  
 
-The above files are intended to give you an idea of the sort of output
-to expect during protocol execution, provided you have used logging and
-exit with error correctly.
+- **README-client-timeout-tfr-err.txt**  
+output from the client when there is an error in a transfer with timeout
+
+The above files are intended to give an idea of the sort of output
+to expect during protocol execution.
 
 ---------------------------------------------------------------------------
 
