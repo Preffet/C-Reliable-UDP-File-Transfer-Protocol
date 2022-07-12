@@ -9,7 +9,7 @@
   
   
 
-# The purpose of this project  
+## The purpose of this project  
 This project demonstrates two file transfer protocols:
 - Reliable file transfer (RFT) with positive acknowledgement in the absence of errors 
 - Reliable file transfer (RFT) with positive acknowledgement and retransmission  – an example 
@@ -24,7 +24,7 @@ will be for an external IP interface).
 
 ---------------------------------------------------------------------------
 
-# Ways to run the project  
+## Ways to run the project  
  
 The following two shell scripts are provided as convenient ways to 
 run the applications:
@@ -82,7 +82,7 @@ And to see the options for running the client application enter:
   
 ---------------------------------------------------------------------------
   
-# Ways to test the project
+## Ways to test the project
 
 A test program is provided to test a subset of the rft_client_util
 library in isolation. The test program is test_rft_client_util. This
@@ -126,7 +126,7 @@ off the significant file data in a data segment payload
 
 ---------------------------------------------------------------------------
 
-# An overview of example log output files
+## An overview of example log output files
 
 The following files provide examples of the log output from the
 rft_client and rft_server:
