@@ -25,8 +25,7 @@ will be for an external IP interface).
 ---------------------------------------------------------------------------
 
 ## Ways to run the project  
-
-#### **Using the provided shell scripts**  
+ 
 The following two shell scripts are provided as convenient ways to 
 run the applications:
 
@@ -49,9 +48,8 @@ in one terminal window, and:
 
     ./run-client.sh
     
-in another terminal window on the same host, then provided the
-rft_client_util library has been implemented, the client will transfer
-the file in660.txt to the server using the send_file_normal function.
+in another terminal window on the same host, then the client will transfer
+the file in660.txt to the server using the send_file_normal function.  
 
 Both scripts have options to allow you to specify a different port
 and/or server address and to transfer different files using either the
@@ -65,36 +63,25 @@ To see the server script help and usage message, enter the command:
 To see the client script help and usage message, enter the command:
 
     ./run-client.sh -h
-    
-When a transfer is completed you can use the [diff](https://man7.org/linux/man-pages/man1/diff.1.html)
-command to check that the client-side input file is the same as the server-side output file.
 
-  
-    
-#### **Running the rft_client and rft_server applications directly**   
-
-You do not have to use the shell scripts. You can run the rft
-applications directly. To do this, enter the command:
+Also, you do not have to use the shell scripts. You can run the rft
+applications directly. To do this, to build the application enter the command:
 
     make 
     
-to build the applications.
-
 Then, assuming compilation succeeds, enter the command:
 
     ./rft_server 
     
 to see the options for running the server application.
 
-And:
+And to see the options for running the client application enter:
 
     ./rft_client
-    
-to see the options for running the client application
 
-
+  
 ---------------------------------------------------------------------------
-
+  
 ## Ways to test the project
 
 A test program is provided to test a subset of the rft_client_util
