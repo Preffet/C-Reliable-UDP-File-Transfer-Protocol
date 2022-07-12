@@ -5,14 +5,14 @@
 ![updated](https://user-images.githubusercontent.com/84241003/178457017-7126a06b-e0c1-484e-b0a8-c94b7f98ab2b.gif)
 
 
+---------------------------------------------------------------------------
 
-## The purpose of this project is to demonstrate two file transfer protocols:
+**The purpose of this project is to demonstrate two file transfer protocols:**
 - Reliable file transfer (RFT) with positive acknowledgement in the absence of errors 
 - Reliable file transfer (RFT) with positive acknowledgement and retransmission  – an example 
 of a PAR protocol
 
 ---------------------------------------------------------------------------
-## Building, testing and running file transfer applications
 
 The RFT application comprises client and server applications:
 - rft_client
@@ -23,27 +23,10 @@ terminal window either on the same host (in which case the server address
 will be 127.0.0.1) or a different host (in which case the server address
 will be for an external IP interface).
 
-### Ways to test and run the project:
 
-- Running the test program test_rft_client_util manually
+### Ways to run the project
 
-A test program is provided to test a subset of the rft_client_util
-library in isolation. The test program is test_rft_client_util. This
-does not test communication between client and server. It just tests
-some of the functions of the rft_client_util library.
-
-The simplest way to build and run the test program is to enter the
-following command:
-
-    make test
-    
-this will compile the test program and run it. It uses the same test
-framework as was used for assignment 1 and output is similar. Currently,
-tests are provided for init_protocol, init_segment and set_udp_socket
-functions.
-
--  Using shell scripts to build and run the RFT applications
-
+**1) Using the provided shell scripts**
 The following two shell scripts are provided as convenient ways to the
 run the applications:
 
@@ -83,16 +66,8 @@ To see the client script help and usage message, enter the command:
 
     ./run-client.sh -h
     
-When a transfer is completed you can use the diff command to check that
-the client-side input file is the same as the server-side output file.
-
-For example, if the client-side input file is in660.txt and the
-server-side output file is out/out.txt, the command:
-
-    diff in660.txt ./out/out.txt
-    
-will compare the two files. See the man page for diff to interpret its
-output.
+When a transfer is completed you can use the [diff](https://man7.org/linux/man-pages/man1/diff.1.html)
+command to check that the client-side input file is the same as the server-side output file.
 
 TIP: if you want to test that you have correctly implemented reaching
 the limit of consecutive retries, just run the client with input file
@@ -106,23 +81,7 @@ consecutive retries (provided there is no server running and therefore
 no ACKs at all).
 
 
-When testing the transfer with timeout and retransmission use the
-in660.txt file to ensure there are sufficient segments to transfer for
-the percentage of lost segments to be close to the loss probability you
-specify. Run a number of transfers with different probabilities. For
-example, try loss probabilities less than 0.3 (tending to no segments
-corrupted), 0.3 (for approx. 1/3 of segments corrupted), 0.5 (for
-approx. 1/2 of segments corrupted) and close to 1.0 (tending to all
-segments corrupted). The actual proportion of lost/corrupted segments is
-random. Therefore, if you specify a loss probability of 0.5, you are
-not likely to get exactly 50% of lost segments. The actual loss will
-be in a range around 50%.
-
-The higher the loss probability you specify the more likely it is that
-the count of consecutive retries will exceed the maximum consecutive
-retries allowed.
-
-- Run the rft_client and rft_server applications directly
+**2) Running the rft_client and rft_server applications directly**
 
 You do not have to use the shell scripts. You can run the rft
 applications directly.
@@ -144,6 +103,24 @@ And:
     ./rft_client
     
 to see the options for running the client application
+
+
+### Ways to test the project
+
+    A test program is provided to test a subset of the rft_client_util
+    library in isolation. The test program is test_rft_client_util. This
+    does not test communication between client and server. It just tests
+    some of the functions of the rft_client_util library.
+
+    The simplest way to build and run the test program is to enter the
+    following command:
+
+        make test
+
+    this will compile the test program and run it. It uses the same test
+    framework as was used for assignment 1 and output is similar. Currently,
+    tests are provided for init_protocol, init_segment and set_udp_socket
+    functions.
 
 ---------------------------------------------------------------------------
 2. AN OVERVIEW OF INPUT FILES
