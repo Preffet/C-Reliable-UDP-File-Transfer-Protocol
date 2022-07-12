@@ -6,37 +6,26 @@
 
 
 
-## C Reliable File Transfer protocol that works on top of UDP 
-
-The purpose of this project is to demonstrate two file transfer protocols: 
-• Reliable file transfer (RFT) with positive acknowledgement in the absence of errors 
-(implemented in the function send_file_normal) 
-• Reliable file transfer (RFT) with positive acknowledgement and retransmission  – an example 
-of a PAR protocol (implemented in the function send_file_with_timeout) 
-
-
-This README file has 3 sections:
-
-1. Building, testing and running file transfer applications 
-2. An overview of input files
-3. An overview of example protocol log output files
+## The purpose of this project is to demonstrate two file transfer protocols:
+- Reliable file transfer (RFT) with positive acknowledgement in the absence of errors 
+- Reliable file transfer (RFT) with positive acknowledgement and retransmission  – an example 
+of a PAR protocol
 
 ---------------------------------------------------------------------------
-1. BUILDING, TESTING AND RUNNING FILE TRANSFER APPLICATIONS
+## Building, testing and running file transfer applications
 
 The RFT application comprises client and server applications:
-    rft_client
-    rft_server
+- rft_client
+- rft_server
 
-Just like the preliminary exercise, you will have to run the server in
-one terminal window and run the client in another terminal window either
-on the same host (in which case the server address will be 127.0.0.1) or
-a different host (in which case the server address will be for an external
-IP interface).
+The server has to be ran in one terminal window and the client in another 
+terminal window either on the same host (in which case the server address
+will be 127.0.0.1) or a different host (in which case the server address
+will be for an external IP interface).
 
-There are three ways to test and run the project.
+### Ways to test and run the project:
 
-1.1. Running the test program: test_rft_client_util
+- Running the test program test_rft_client_util manually
 
 A test program is provided to test a subset of the rft_client_util
 library in isolation. The test program is test_rft_client_util. This
@@ -53,15 +42,15 @@ framework as was used for assignment 1 and output is similar. Currently,
 tests are provided for init_protocol, init_segment and set_udp_socket
 functions.
 
-1.2. Use run shell scripts to build and run the RFT applications
+-  Using shell scripts to build and run the RFT applications
 
 The following two shell scripts are provided as convenient ways to the
 run the applications:
 
-    run-server.sh to compile and run the rft_server
+    - run-server.sh to compile and run the rft_server
         (which also compiles the rft_client)
     
-    run-client.sh to compile and run the rft-client
+    - run-client.sh to compile and run the rft-client
     
 By default, the run-server.sh script will compile the applications and
 start the server on port 20333, and the run-client.sh script will start
@@ -133,7 +122,7 @@ The higher the loss probability you specify the more likely it is that
 the count of consecutive retries will exceed the maximum consecutive
 retries allowed.
 
-1.3. Run the rft_client and rft_server applications directly
+- Run the rft_client and rft_server applications directly
 
 You do not have to use the shell scripts. You can run the rft
 applications directly.
